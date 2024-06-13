@@ -18,27 +18,27 @@
 
 1. When the program starts, the console is cleared and a welcome message is displayed to the user.
 
-'''
+```cs
+...
 Console.Clear();
 
 Console.WriteLine("Welcome to our Running Star program");
-
-'''
-
+...
+```
 2. I set the starting position of the asterisk (\*) to (1, 1).
 
-'''cs
 
+```cs
 int axisX = 1;
 int axisY = 1;
 
 Console.SetCursorPosition(axisX, axisY);
-Console.Write('*');'''
-
+Console.Write('*');
+```
 
 3. While Loop
 
-'''cs
+```cs
 try
 {
     while (true)
@@ -79,7 +79,7 @@ catch (Exception exception)
     GetExceptionMessage();
 }
 
-'''
+```
 Let me explain the code:
 
 - Working with console keys: If the key is pressed (Console.KeyAvailable), we read the pressed key (Console.ReadKey(true)).
@@ -97,13 +97,13 @@ Let me explain the code:
 
 4. Throw an exception using the method to the console.
 
-'''cs
+```cs
 static void GetExceptionMessage()
 {
     Console.WriteLine("You are out of console !!!");
     Console.WriteLine("Please start the program again !!!");
 }
 
-'''
+```
 5. Run the program if you want to see the result !!!
 
