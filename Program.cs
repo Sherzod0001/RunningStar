@@ -1,8 +1,10 @@
 ﻿using System;
 
+Console.WriteLine("Welcome to our Running Star program");
+
 Console.Clear();
 
-Console.WriteLine("Welcome to our Running Star program");
+
 
 int axisX = 1;
 int axisY = 1;
@@ -10,9 +12,9 @@ int axisY = 1;
 Console.SetCursorPosition(axisX, axisY);
 Console.Write('*');
 
-while (true)
+try
 {
-    if (axisX > 0 || axisY > 0)
+    while (true)
     {
         if (Console.KeyAvailable)
         {
@@ -35,16 +37,26 @@ while (true)
                 case ConsoleKey.DownArrow:
                     axisY++;
                     break;
+                default:
+                    Console.WriteLine("You pressed the wrong key");
+                    break;
             }
 
             Console.SetCursorPosition(axisX, axisY);
             Console.Write('*');
         }
     }
-    else 
-    {
-        Console.WriteLine("An error key was entered !!! ");
-        Console.WriteLine("Please enter only '➡️' '⬅️' '⬆️' '⬇️' ");
-    }
-    
+
+}catch (Exception exception)
+{
+    GetExceptionMessage();
+}
+
+static void GetExceptionMessage()
+{   
+    int axisYTwo = 0;
+    int axisXTwo = 0;
+    Console.SetCursorPosition(axisXTwo, axisYTwo);
+    Console.WriteLine("You are out of console!!");
+    Console.WriteLine("Please start the program again!!!");
 }
