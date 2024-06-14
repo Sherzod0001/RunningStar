@@ -4,8 +4,6 @@ Console.WriteLine("Welcome to our Running Star program");
 
 Console.Clear();
 
-
-
 int axisX = 1;
 int axisY = 1;
 
@@ -18,7 +16,7 @@ try
     {
         if (Console.KeyAvailable)
         {
-            ConsoleKeyInfo keyInput = Console.ReadKey(true);
+            ConsoleKeyInfo keyInput = Console.ReadKey();
 
             Console.SetCursorPosition(axisX, axisY);
             Console.Write(' ');
@@ -47,16 +45,19 @@ try
         }
     }
 
-}catch (Exception exception)
+}
+catch (Exception exception)
 {
     GetExceptionMessage();
 }
 
 static void GetExceptionMessage()
-{   
+{
     int axisYTwo = 0;
     int axisXTwo = 0;
+
     Console.SetCursorPosition(axisXTwo, axisYTwo);
+
     Console.WriteLine("You are out of console!!");
     Console.WriteLine("Please start the program again!!!");
 }
